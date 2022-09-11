@@ -1,0 +1,446 @@
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  
+}
+
+body{
+    color: #fff;
+    background: rgb(245,237,229);
+    background: linear-gradient(180deg, rgba(245,237,229,0.30575980392156865) 0%, rgba(134,81,25,1) 100%);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 7.5s ease-in-out infinite;
+
+  @keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+  }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+  
+}
+#rimbaud{
+  margin-left: 400px;
+  position: absolute;
+  justify-content: center;
+  
+}
+#verlaine{
+  margin-left: 400px;
+  position: absolute;
+  justify-content: center;
+ }
+
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #E6DADA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, hsla(192, 28%, 21%, 0.103), #E6DADA), url("bosque.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, hsla(192, 28%, 21%, 0.123), #E6DADA), url("escritura.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+}
+nav{
+    text-align: right;
+    padding: 10px 15px ;
+    
+   
+}
+ nav > a{
+    color: black;
+    font-weight: 200;
+    text-decoration: none;
+    margin-right: 40px;
+    margin-left: -30px;
+    
+    
+
+}
+nav > a:hover{
+    text-decoration: underline;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+header .textos-header{
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+ }
+.textos-header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2cm;
+   
+}
+.textos-header h3 {
+    font-family: 'Dancing Script', cursive;
+    
+
+}
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+}
+
+/*about us*/
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imagen-about-us{
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+.contenido-textos h3 span{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ @media screen and (max-width: 900px){
+    header{
+        background-position: center
+    }
+ }
+ nav{
+    font-family: 'Aboreto', cursive;
+    font-style: oblique;
+ }
+ .flip-card {
+    background-color: transparent;
+    width: 1600px;
+    height: 200px;
+    border: 0px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color:transparent;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: transparent;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  .nav{
+    width: 300px;
+  }
+  .list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #E6DADA;
+  }
+  .list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  .list__item--click{
+    cursor: pointer;
+  }
+  .list__buttom{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .list__arrow{
+    margin-left: auto;
+    transition: transform .3s;
+  }
+  .nav__link{
+    color: aqua;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+  }
+  .nav__link--inside{
+    border-radius: 6px;
+    padding-left: 20px;
+  }
+  .nav__link--inside:hover{
+   background-color: lightgrey;
+  }
+  .list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid black;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+  }
+  .arrow .list__arrow{
+    transform: rotate(90deg);
+  }
+  .bars__menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 200;
+    margin-left: 32px;
+    z-index: 200;
+    
+    
+    
+}
+.bars__menu span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: black;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 600ms;
+    border-radius: 10px;
+    z-index: 200;
+
+}
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px, 1px)
+
+
+}
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+.activeline2__bars-menu{
+  opacity: 0;
+  margin-left: -30px;
+}
+.menu{
+    display: none; 
+    align-items: center;
+    align-items: center;
+    z-index: 200;
+ }
+a{
+    color: black;
+    text-decoration: none;
+    z-index: 200;
+    }
+section{
+    top: 30px;
+    left: 1250px;
+    position: fixed;
+    width: 100px;
+    text-align: center;
+    z-index: 200;
+}
+.wave{
+  z-index: 100;
+}
+  
+
+.slideshow-container {
+  width: 800px;
+
+  position: relative;
+  margin: auto;
+}
+ 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin-top: -200px;
+}
+ 
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+ 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+ 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+ 
+/* Caption text */
+.text {
+  color: black;
+  font-size: 20px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 150%;
+  margin-left: -100px;
+ 
+}
+ 
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+ 
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+ 
+.active, .dot:hover {
+  background-color: #717171;
+}
+ 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+#participantes{
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  margin-left: 530px;
+  margin-top: -200px;
+  width: 285px;
+  height: 60px;
+}
+#btnequipos{
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  margin-left: 620px;
+  margin-top: -125px;
+  width: 100px;
+  height: 30px;
+}
+#equipo2{
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  margin-left: 950px;
+  margin-top: -90px;
+  width: 100px;
+  height: 30px;
+  color: black;
+  font-size: large;
+}
+#equipo1{
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  margin-top: -90px;
+  margin-left: 300px;
+  width: 100px;
+  height: 30px;
+  color: black;
+  font-size: large;
+}
+#fuentes{
+  margin-left: 50px
+
+}
+li > a:hover{
+  text-decoration: underline;
+ }
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ 
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+

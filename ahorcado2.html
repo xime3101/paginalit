@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ahorcado2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Ahorcado Literario</h1>
+    <div>
+        <canvas id="canvas"></canvas>
+        <div id="usedLetters"></div>
+    </div>
+    <div id="usedLetters"></div>
+    <div id="wordContainer"  
+    style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+    unselectable="on" onselectstart="return false;" 
+    onmousedown="return false;"></div>
+    <div>
+        <p id="pista" >
+        </p>
+    </div>
+    
+    <button id="startButton">COMENZAR</button>
+    <script src="ahorcado2.js"></script>
+    <script src="palabras2.js"></script>
+</body>
+</html>
